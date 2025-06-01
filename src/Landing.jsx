@@ -6,7 +6,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react"; // <<<<<<<<<<<< CORRECTED IMPORT
+import React, { useEffect, useRef, useState } from "react";
 
 // React Icons Imports
 import { BiBrain } from "react-icons/bi";
@@ -80,9 +80,9 @@ const projectsData = [
       "Google Gemini",
       "Render",
     ],
-    imageUrl: "/project.jpg",
+    imageUrl: "/project.jpg", // Make sure this image exists in your public folder
     liveLink: "https://plant-disease-detection-mern.onrender.com/",
-    repoLink: "https://github.com/SarangAkhade/Plant-Disease-Detection-MERN",
+    repoLink: "https://github.com/rohith-2809/mern-test",
     duration: "Jan 2025 - April 2025",
   },
 ];
@@ -186,8 +186,8 @@ const contactInfo = {
   phone: "+91 82087 96008",
   location: "Pune, Maharashtra, India",
   portfolioUrl: "sarangakhade.netlify.app",
-  githubUrl: "https://github.com/SarangAkhade",
-  linkedinUrl: "https://www.linkedin.com/in/sarang-akhade-931656225/",
+  githubUrl: "https://github.com/Akhadesarang1",
+  linkedinUrl: "https://www.linkedin.com/in/sarang-akhade-72a846272/", // <<<<<<<<<<<< YOUR SPECIFIC LINK
 };
 
 // --- Custom Cursor Component (with magnetic effect) ---
@@ -399,8 +399,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             data-magnetic
           >
-            {" "}
-            Sarang Akhade{" "}
+            Sarang Akhade
           </motion.a>
           <div className="hidden md:flex space-x-1">
             {navLinks.map((link) => (
@@ -416,8 +415,7 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 300 }}
                 data-magnetic
               >
-                {" "}
-                {link.label}{" "}
+                {link.label}
               </motion.a>
             ))}
           </div>
@@ -433,12 +431,11 @@ const Navbar = () => {
               aria-controls={mobileMenuId}
               data-magnetic
             >
-              {" "}
               {isOpen ? (
                 <FaTimes className="h-6 w-6" />
               ) : (
                 <FaBars className="h-6 w-6" />
-              )}{" "}
+              )}
             </motion.button>
           </div>
         </div>
@@ -463,8 +460,7 @@ const Navbar = () => {
                   className="text-light-text hover:text-secondary block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                   role="menuitem"
                 >
-                  {" "}
-                  {link.label}{" "}
+                  {link.label}
                 </a>
               ))}
             </div>
@@ -505,7 +501,7 @@ const Hero = () => {
     >
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", y: yBg, zIndex: 0 }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", y: yBg, zIndex: 0 }} // Make sure /hero-bg.jpg exists in public folder
       />
       <motion.div
         className="bg-primary/70 backdrop-blur-md p-8 md:p-16 rounded-xl text-center max-w-4xl mx-auto shadow-2xl relative"
@@ -617,29 +613,25 @@ const About = () => {
             className="md:w-full text-center md:text-left bg-primary p-8 rounded-xl shadow-xl relative"
           >
             <p className="text-lg text-light-text leading-relaxed mb-4">
-              {" "}
               Hi, I'm Sarang Akhade, a Full Stack Developer with a strong
               passion for Machine Learning and crafting complex, user-centric
-              projects.{" "}
+              projects.
             </p>
             <p className="text-lg text-light-text leading-relaxed mb-4">
-              {" "}
               I possess high problem-solving skills and proficiency in UX
               Design, enabling me to build applications that are not only
-              functional but also intuitive and accessible to a wide audience.{" "}
+              functional but also intuitive and accessible to a wide audience.
             </p>
             <p className="text-lg text-light-text leading-relaxed mb-4">
-              {" "}
               One of my key achievements includes developing a highly scalable
               system for diagnosing plant diseases using the MERN stack and
               advanced Machine Learning models. My in-depth knowledge of
               TensorFlow and other ML/DL frameworks is instrumental in creating
-              effective and efficient models.{" "}
+              effective and efficient models.
             </p>
             <p className="text-lg text-light-text leading-relaxed">
-              {" "}
               I thrive in environments where I can continuously learn and
-              contribute to impactful solutions.{" "}
+              contribute to impactful solutions.
             </p>
           </motion.div>
         </div>
@@ -681,9 +673,10 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Simulate loading
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500); // Adjust as needed
     return () => clearTimeout(timer);
   }, []);
 
@@ -701,8 +694,8 @@ const Projects = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-12 max-w-3xl mx-auto">
           {isLoading ? (
             <>
-              {" "}
-              <ProjectCardSkeleton />{" "}
+              <ProjectCardSkeleton />
+              {/* You can add more skeletons if you have multiple projects initially */}
             </>
           ) : (
             projectsData.map((project, index) => (
@@ -763,7 +756,7 @@ const ProjectCard = ({ project }) => {
         style={{ transform: "translateZ(20px)" }}
       >
         <motion.img
-          src={project.imageUrl || "/placeholder-project.png"}
+          src={project.imageUrl || "/placeholder-project.png"} // Ensure placeholder exists if imageUrl is missing
           alt={project.title}
           className="w-full h-60 object-cover"
           transition={{ duration: 0.2 }}
@@ -830,7 +823,7 @@ const ProjectCard = ({ project }) => {
               whileTap={{ scale: 0.95 }}
               aria-label={`View live demo of ${project.title}`}
             >
-              <FaExternalLinkAlt className="w-5 h-5 mr-2" aria-hidden="true" />{" "}
+              <FaExternalLinkAlt className="w-5 h-5 mr-2" aria-hidden="true" />
               Live Demo
             </motion.a>
           )}
@@ -900,7 +893,7 @@ const SkillCategory = ({ title, skills, categoryIcon }) => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             {skill.icon &&
-              React.cloneElement(skill.icon, { "aria-hidden": "true" })}{" "}
+              React.cloneElement(skill.icon, { "aria-hidden": "true" })}
             {skill.name}
           </motion.span>
         ))}
@@ -1116,7 +1109,7 @@ const Contact = () => {
             text={contactInfo.email}
           />
           <ContactInfoItem
-            href={`tel:${contactInfo.phone}`}
+            href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} // Remove spaces for tel link
             icon={FaPhoneAlt}
             title="Phone"
             text={contactInfo.phone}
@@ -1135,7 +1128,7 @@ const Contact = () => {
         >
           {[
             {
-              href: contactInfo.linkedinUrl,
+              href: contactInfo.linkedinUrl, // Uses the updated URL from contactInfo
               title: "LinkedIn",
               icon: FaLinkedin,
               label: "My LinkedIn Profile",
@@ -1149,7 +1142,7 @@ const Contact = () => {
             {
               href: contactInfo.portfolioUrl.startsWith("http")
                 ? contactInfo.portfolioUrl
-                : `http://${contactInfo.portfolioUrl}`,
+                : `https://${contactInfo.portfolioUrl}`, // Default to https for portfolio
               title: "Portfolio",
               icon: FaExternalLinkAlt,
               label: "My Portfolio Website",
@@ -1162,13 +1155,12 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               title={social.title}
-              className="text-secondary hover:text-sky-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 focus-visible:ring-secondary rounded-md p-1" // Added padding for better focus ring
+              className="text-secondary hover:text-sky-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-800 focus-visible:ring-secondary rounded-md p-1"
               whileHover={{ y: -5, scale: 1.1, color: "#0ea5e9" }}
               whileTap={{ scale: 0.9 }}
               aria-label={social.label}
             >
-              {" "}
-              <social.icon className="h-10 w-10" />{" "}
+              <social.icon className="h-10 w-10" />
             </motion.a>
           ))}
         </motion.div>
@@ -1188,13 +1180,11 @@ const Footer = () => {
       transition={{ duration: 1, delay: 0.5, ease: "anticipate" }}
     >
       <p className="text-dark-text text-sm">
-        {" "}
-        © {currentYear} Sarang Rayaji Akhade. All rights reserved.{" "}
+        © {currentYear} Sarang Rayaji Akhade. All rights reserved.
       </p>
       <p className="text-xs text-slate-600 mt-1">
-        {" "}
         Built with React, Tailwind CSS & Framer Motion. Inspired and Ready to
-        Innovate.{" "}
+        Innovate.
       </p>
     </motion.footer>
   );
@@ -1203,11 +1193,15 @@ const Footer = () => {
 // --- Main Landing Page Component ---
 const LandingPage = () => {
   useEffect(() => {
+    // Hide system cursor
     document.body.style.cursor = "none";
+
+    // Smooth scroll to hash if present
     if (window.location.hash) {
       const id = window.location.hash.substring(1);
       const element = document.getElementById(id);
       if (element) {
+        // Timeout to ensure layout is stable
         setTimeout(() => {
           const navbarHeight = document.querySelector("nav")?.offsetHeight || 0;
           const elementPosition =
@@ -1217,6 +1211,7 @@ const LandingPage = () => {
         }, 100);
       }
     }
+    // Cleanup: Restore system cursor on component unmount
     return () => {
       document.body.style.cursor = "default";
     };
