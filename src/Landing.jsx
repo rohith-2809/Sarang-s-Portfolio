@@ -1182,10 +1182,7 @@ const Footer = () => {
       <p className="text-dark-text text-sm">
         © {currentYear} Sarang Rayaji Akhade. All rights reserved.
       </p>
-      <p className="text-xs text-slate-600 mt-1">
-        Built with React, Tailwind CSS & Framer Motion. Inspired and Ready to
-        Innovate.
-      </p>
+  
     </motion.footer>
   );
 };
