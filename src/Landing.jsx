@@ -60,6 +60,54 @@ const buttonHoverEffect = {
 // --- Data ---
 const projectsData = [
   {
+    title: "DocuAgent: AI-Powered Documentation Automation",
+    description:
+      "An intelligent agent that automates software documentation by generating UML diagrams and providing code explanations directly from a given codebase, streamlining the development workflow.",
+    details: [
+      "Developed a full-stack MERN application with a focus on AI integration.",
+      "Engineered a backend system to analyze code and generate documentation.",
+      "Integrated a powerful AI model to create UML diagrams and code summaries.",
+      "Designed a user-friendly React interface for code submission and viewing generated documents.",
+      "Deployed on Render for continuous availability and scalability.",
+    ],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "AI/LLM APIs",
+      "Render",
+    ],
+    imageUrl: "/project.jpg",
+    liveLink: "https://docuagent-2vp4.onrender.com",
+    repoLink: "https://github.com/Akhadesarang1/DocuAgent",
+    duration: "May 2024 - June 2024",
+  },
+  {
+    title: "Employee Management System",
+    description:
+      "A comprehensive MERN stack web application built to streamline employee management processes. It provides administrators with tools to efficiently handle employee data, track attendance, and manage leave requests.",
+    details: [
+      "Full CRUD (Create, Read, Update, Delete) functionality for employee records.",
+      "Implemented secure user authentication and role-based access control (Admin vs. Employee).",
+      "Developed modules for leave application and attendance tracking.",
+      "Built a responsive and intuitive user interface using React.js.",
+      "Ensured seamless data flow with a robust Node.js/Express.js backend and MongoDB.",
+    ],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT (for Auth)",
+      "Render",
+    ],
+    imageUrl: "/project.jpg",
+    liveLink: "https://employee-management-system-jdxe.onrender.com/",
+    repoLink: "https://github.com/Akhadesarang1/ems",
+    duration: "April 2024 - May 2024",
+  },
+  {
     title: "AI-Powered Plant Disease Detection",
     description:
       "An intelligent web application designed to analyze plant health and detect diseases through image classification. This system helps farmers, gardeners, and agricultural experts to identify plant diseases early and take corrective actions, ensuring crop health and maximum yield.",
@@ -80,7 +128,7 @@ const projectsData = [
       "Google Gemini",
       "Render",
     ],
-    imageUrl: "/project.jpg", // Make sure this image exists in your public folder
+    imageUrl: "/project.jpg",
     liveLink: "https://plant-disease-detection-mern.onrender.com/",
     repoLink: "https://github.com/rohith-2809/mern-test",
     duration: "Jan 2025 - April 2025",
@@ -694,8 +742,9 @@ const Projects = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-12 max-w-3xl mx-auto">
           {isLoading ? (
             <>
-              <ProjectCardSkeleton />
-              {/* You can add more skeletons if you have multiple projects initially */}
+              {[...Array(projectsData.length)].map((_, i) => (
+                <ProjectCardSkeleton key={i} />
+              ))}
             </>
           ) : (
             projectsData.map((project, index) => (
