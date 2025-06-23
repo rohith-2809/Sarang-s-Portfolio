@@ -78,10 +78,9 @@ const projectsData = [
       "AI/LLM APIs",
       "Render",
     ],
-    imageUrl: "/project.jpg",
     liveLink: "https://docuagent-2vp4.onrender.com",
     repoLink: "https://github.com/Akhadesarang1/DocuAgent",
-    duration: "May 2024 - June 2024",
+    duration: "May 2025 - June 2025",
   },
   {
     title: "Employee Management System",
@@ -102,10 +101,9 @@ const projectsData = [
       "JWT (for Auth)",
       "Render",
     ],
-    imageUrl: "/project.jpg",
     liveLink: "https://employee-management-system-jdxe.onrender.com/",
     repoLink: "https://github.com/Akhadesarang1/ems",
-    duration: "April 2024 - May 2024",
+    duration: "April 2025 - May 2025",
   },
   {
     title: "AI-Powered Plant Disease Detection",
@@ -128,7 +126,7 @@ const projectsData = [
       "Google Gemini",
       "Render",
     ],
-    imageUrl: "/project.jpg",
+    imageUrl: "/project.jpg", // Make sure this image exists in your public folder
     liveLink: "https://plant-disease-detection-mern.onrender.com/",
     repoLink: "https://github.com/rohith-2809/mern-test",
     duration: "Jan 2025 - April 2025",
@@ -235,7 +233,7 @@ const contactInfo = {
   location: "Pune, Maharashtra, India",
   portfolioUrl: "sarangakhade.netlify.app",
   githubUrl: "https://github.com/Akhadesarang1",
-  linkedinUrl: "https://www.linkedin.com/in/sarang-akhade-72a846272/", // <<<<<<<<<<<< YOUR SPECIFIC LINK
+  linkedinUrl: "https://www.linkedin.com/in/sarang-akhade-72a846272/",
 };
 
 // --- Custom Cursor Component (with magnetic effect) ---
@@ -800,17 +798,19 @@ const ProjectCard = ({ project }) => {
       tabIndex={0}
       aria-labelledby={projectTitleId}
     >
-      <div
-        className="overflow-hidden rounded-t-xl"
-        style={{ transform: "translateZ(20px)" }}
-      >
-        <motion.img
-          src={project.imageUrl || "/placeholder-project.png"} // Ensure placeholder exists if imageUrl is missing
-          alt={project.title}
-          className="w-full h-60 object-cover"
-          transition={{ duration: 0.2 }}
-        />
-      </div>
+      {project.imageUrl && (
+        <div
+          className="overflow-hidden rounded-t-xl"
+          style={{ transform: "translateZ(20px)" }}
+        >
+          <motion.img
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-60 object-cover"
+            transition={{ duration: 0.2 }}
+          />
+        </div>
+      )}
       <div
         className="p-6 flex flex-col flex-grow"
         style={{ transform: "translateZ(10px)" }}
@@ -1177,7 +1177,7 @@ const Contact = () => {
         >
           {[
             {
-              href: contactInfo.linkedinUrl, // Uses the updated URL from contactInfo
+              href: contactInfo.linkedinUrl,
               title: "LinkedIn",
               icon: FaLinkedin,
               label: "My LinkedIn Profile",
@@ -1191,7 +1191,7 @@ const Contact = () => {
             {
               href: contactInfo.portfolioUrl.startsWith("http")
                 ? contactInfo.portfolioUrl
-                : `https://${contactInfo.portfolioUrl}`, // Default to https for portfolio
+                : `https://${contactInfo.portfolioUrl}`,
               title: "Portfolio",
               icon: FaExternalLinkAlt,
               label: "My Portfolio Website",
@@ -1231,7 +1231,6 @@ const Footer = () => {
       <p className="text-dark-text text-sm">
         © {currentYear} Sarang Rayaji Akhade. All rights reserved.
       </p>
-  
     </motion.footer>
   );
 };
