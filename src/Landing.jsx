@@ -127,7 +127,7 @@ const projectsData = [
       "Render",
     ],
     imageUrl: "/project.jpg", // Make sure this image exists in your public folder
-    liveLink: "https://plant-disease-detection-mern.onrender.com/",
+    liveLink: "https://mern-test-client.onrender.com/",
     repoLink: "https://github.com/rohith-2809/mern-test",
     duration: "Jan 2025 - April 2025",
   },
