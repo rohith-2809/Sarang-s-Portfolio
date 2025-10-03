@@ -637,7 +637,6 @@ const Hero = () => {
   );
 };
 
-// --- About Component ---
 const About = () => {
   const contentRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -675,11 +674,13 @@ const About = () => {
               TensorFlow and other ML/DL frameworks is instrumental in creating
               effective and efficient models.
             </p>
-            <p className="text-lg text-light-text leading-relaxed">
+            <p className="text-lg text-light-text leading-relaxed mb-8">
               I thrive in environments where I can continuously learn and
               contribute to impactful solutions.
             </p>
-             <div className="flex justify-center md:justify-start">
+            
+            {/* Resume Button */}
+            <div className="flex justify-center md:justify-start">
               <a
                 href="https://docs.google.com/document/d/1dzo-pYUZTfXeajINFtVCouz-BWI2v8PN/edit?usp=sharing&ouid=101285198437517701799&rtpof=true&sd=true"
                 target="_blank"
