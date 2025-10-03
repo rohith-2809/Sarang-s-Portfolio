@@ -5,12 +5,13 @@ import {
   useScroll,
   useSpring,
   useTransform,
-   MdWork, 
-MdDescription ,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 // React Icons Imports
+
+
+import { MdWork, MdDescription } from 'react-icons/md';
 import { BiBrain } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
 import {
