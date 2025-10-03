@@ -679,6 +679,17 @@ const About = () => {
               I thrive in environments where I can continuously learn and
               contribute to impactful solutions.
             </p>
+             <div className="flex justify-center md:justify-start">
+              <a
+                href="https://docs.google.com/document/d/1dzo-pYUZTfXeajINFtVCouz-BWI2v8PN/edit?usp=sharing&ouid=101285198437517701799&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-slate-100 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-transform"
+              >
+                <MdDescription className="text-xl" />
+                View My Resume
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
