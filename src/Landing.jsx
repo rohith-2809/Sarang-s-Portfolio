@@ -5,6 +5,8 @@ import {
   useScroll,
   useSpring,
   useTransform,
+   MdWork, 
+MdDescription ,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -646,7 +648,7 @@ const About = () => {
   });
   const x = useTransform(scrollYProgress, [0, 1], [-40, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
-
+// About
   return (
     <section id="about" className="py-20 px-6 bg-slate-800 overflow-hidden">
       <div className="container mx-auto">
@@ -697,7 +699,6 @@ const About = () => {
     </section>
   );
 };
-
 // --- Project Card Skeleton ---
 const ProjectCardSkeleton = () => (
   <div
