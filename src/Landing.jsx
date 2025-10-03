@@ -8,9 +8,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-// React Icons Imports
-
-
+// React Icons Imports - FIXED: Remove duplicate imports
 import { MdWork, MdDescription } from 'react-icons/md';
 import { BiBrain } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
@@ -31,7 +29,7 @@ import {
   FaTimes,
   FaUsers,
 } from "react-icons/fa";
-import { MdWork } from "react-icons/md";
+// REMOVE THIS DUPLICATE LINE: import { MdWork } from "react-icons/md";
 import {
   RiChatQuoteLine,
   RiCodeSSlashLine,
@@ -41,7 +39,6 @@ import {
 } from "react-icons/ri";
 
 import { TypeAnimation } from "react-type-animation";
-
 // --- Framer Motion Variants ---
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
