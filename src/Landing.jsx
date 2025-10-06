@@ -636,7 +636,7 @@ const Hero = () => {
     </section>
   );
 };
-
+// About
 const About = () => {
   const contentRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -646,7 +646,6 @@ const About = () => {
   });
   const x = useTransform(scrollYProgress, [0, 1], [-40, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
-// About
   return (
     <section id="about" className="py-20 px-6 bg-slate-800 overflow-hidden">
       <div className="container mx-auto">
@@ -682,7 +681,7 @@ const About = () => {
             {/* Resume Button */}
             <div className="flex justify-center md:justify-start">
               <a
-                href="https://docs.google.com/document/d/1dzo-pYUZTfXeajINFtVCouz-BWI2v8PN/edit?usp=sharing&ouid=101285198437517701799&rtpof=true&sd=true"
+                href="https://drive.google.com/file/d/1RShYJYLHia4v-uzVn-kC5OGz1rGJ6lAO/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-slate-100 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-transform"
