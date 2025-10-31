@@ -681,7 +681,7 @@ const About = () => {
             {/* Resume Button */}
             <div className="flex justify-center md:justify-start">
               <a
-                href="https://drive.google.com/file/d/1RShYJYLHia4v-uzVn-kC5OGz1rGJ6lAO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1WdgysfcQuLH5vGTv9M-InixkmJgUtq7N/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-semibold hover:bg-slate-100 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-transform"
