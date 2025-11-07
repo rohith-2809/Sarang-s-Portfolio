@@ -80,7 +80,7 @@ const projectsData = [
     ],
     liveLink: "https://docuagent-2vp4.onrender.com",
     repoLink: "https://github.com/Akhadesarang1/DocuAgent",
-    duration: "May 2025 - June 2025",
+   
   },
   {
     title: "Employee Management System",
@@ -103,7 +103,7 @@ const projectsData = [
     ],
     liveLink: "https://employee-management-system-jdxe.onrender.com/",
     repoLink: "https://github.com/Akhadesarang1/ems",
-    duration: "April 2025 - May 2025",
+   
   },
   {
     title: "AI-Powered Plant Disease Detection",
@@ -129,7 +129,7 @@ const projectsData = [
     imageUrl: "/project.jpg", // Make sure this image exists in your public folder
     liveLink: "https://mern-test-client.onrender.com/",
     repoLink: "https://github.com/rohith-2809/mern-test",
-    duration: "Jan 2025 - April 2025",
+  
   },
 ];
 
