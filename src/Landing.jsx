@@ -211,7 +211,7 @@ const educationData = [
     degree: "Master of Computer Applications (MCA)",
     institution: "JSPM's Jayawant Institute of Management Studies, Pune",
     duration: "Sept 2023 – May 2025 ",
-    cgpa: "CGPA: 7.04 ",
+    cgpa: "CGPA: 7.38 ",
     icon: (
       <FaGraduationCap className="w-8 h-8 text-secondary mr-4 flex-shrink-0" />
     ),
