@@ -29,7 +29,7 @@ import {
   FaTimes,
   FaUsers,
 } from "react-icons/fa";
-// REMOVE THIS DUPLICATE LINE: import { MdWork } from "react-icons/md";
+
 import {
   RiChatQuoteLine,
   RiCodeSSlashLine,
@@ -210,7 +210,7 @@ const educationData = [
   {
     degree: "Master of Computer Applications (MCA)",
     institution: "JSPM's Jayawant Institute of Management Studies, Pune",
-    duration: "Sept 2023 – May 2025 ",
+    duration: "Sept 2023 – Sept 2025 ",
     cgpa: "CGPA: 7.38 ",
     icon: (
       <FaGraduationCap className="w-8 h-8 text-secondary mr-4 flex-shrink-0" />
@@ -231,7 +231,7 @@ const contactInfo = {
   email: "akhadesarang1036@gmail.com",
   phone: "+91 82087 96008",
   location: "Pune, Maharashtra, India",
-  portfolioUrl: "sarangakhade.netlify.app",
+  portfolioUrl: "https://sarangs-portfolio.onrender.com/",
   githubUrl: "https://github.com/Akhadesarang1",
   linkedinUrl: "https://www.linkedin.com/in/sarang-akhade-72a846272/",
 };
