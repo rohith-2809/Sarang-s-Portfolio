@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
-// React Icons Imports
+// React Icons Imports - FIXED: Remove duplicate imports
 import { MdWork, MdDescription } from 'react-icons/md';
 import { BiBrain } from "react-icons/bi";
 import { DiMongodb } from "react-icons/di";
@@ -29,6 +29,7 @@ import {
   FaTimes,
   FaUsers,
 } from "react-icons/fa";
+// REMOVE THIS DUPLICATE LINE: import { MdWork } from "react-icons/md";
 import {
   RiChatQuoteLine,
   RiCodeSSlashLine,
@@ -36,12 +37,8 @@ import {
   RiSparklingLine,
   RiTeamLine,
 } from "react-icons/ri";
+
 import { TypeAnimation } from "react-type-animation";
-
-// New Tech Stack Icons
-import { SiReact, SiNodedotjs, SiExpress, SiMongodb, SiPython, SiTensorflow, SiHuggingface, SiTailwindcss, SiFigma, SiDocker, SiGrafana, SiGooglecloud } from "react-icons/si";
-import { TbBrandVscode, TbBrandGit } from "react-icons/tb";
-
 // --- Framer Motion Variants ---
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -83,6 +80,7 @@ const projectsData = [
     ],
     liveLink: "https://docuagent-2vp4.onrender.com",
     repoLink: "https://github.com/Akhadesarang1/DocuAgent",
+   
   },
   {
     title: "Employee Management System",
@@ -105,6 +103,7 @@ const projectsData = [
     ],
     liveLink: "https://employee-management-system-jdxe.onrender.com/",
     repoLink: "https://github.com/Akhadesarang1/ems",
+   
   },
   {
     title: "AI-Powered Plant Disease Detection",
@@ -127,9 +126,10 @@ const projectsData = [
       "Google Gemini",
       "Render",
     ],
-    imageUrl: "/project.jpg",
+    imageUrl: "/project.jpg", // Make sure this image exists in your public folder
     liveLink: "https://mern-test-client.onrender.com/",
     repoLink: "https://github.com/rohith-2809/mern-test",
+  
   },
 ];
 
@@ -205,121 +205,6 @@ const skillsData = {
     },
   ],
 };
-
-const techStackData = [
-  {
-    name: "React",
-    description: "Building dynamic, component-based UIs with modern hooks",
-    icon: <SiReact className="w-8 h-8" />,
-    color: "text-cyan-400",
-    bgColor: "hover:bg-cyan-400/10",
-    delay: 0,
-  },
-  {
-    name: "Node.js",
-    description: "Scalable server-side applications with event-driven architecture",
-    icon: <SiNodedotjs className="w-8 h-8" />,
-    color: "text-green-500",
-    bgColor: "hover:bg-green-500/10",
-    delay: 0.1,
-  },
-  {
-    name: "Express",
-    description: "Fast, minimalist web framework for building robust APIs",
-    icon: <SiExpress className="w-8 h-8" />,
-    color: "text-gray-300",
-    bgColor: "hover:bg-gray-300/10",
-    delay: 0.2,
-  },
-  {
-    name: "MongoDB",
-    description: "Flexible NoSQL database with document-oriented storage",
-    icon: <SiMongodb className="w-8 h-8" />,
-    color: "text-green-400",
-    bgColor: "hover:bg-green-400/10",
-    delay: 0.3,
-  },
-  {
-    name: "Python",
-    description: "Versatile language for ML, data analysis, and backend development",
-    icon: <SiPython className="w-8 h-8" />,
-    color: "text-yellow-400",
-    bgColor: "hover:bg-yellow-400/10",
-    delay: 0.4,
-  },
-  {
-    name: "TensorFlow",
-    description: "End-to-end open-source platform for machine learning",
-    icon: <SiTensorflow className="w-8 h-8" />,
-    color: "text-orange-500",
-    bgColor: "hover:bg-orange-500/10",
-    delay: 0.5,
-  },
-  {
-    name: "HuggingFace",
-    description: "State-of-the-art transformer models and NLP tools",
-    icon: <SiHuggingface className="w-8 h-8" />,
-    color: "text-yellow-300",
-    bgColor: "hover:bg-yellow-300/10",
-    delay: 0.6,
-  },
-  {
-    name: "Tailwind CSS",
-    description: "Utility-first CSS framework for rapid UI development",
-    icon: <SiTailwindcss className="w-8 h-8" />,
-    color: "text-teal-400",
-    bgColor: "hover:bg-teal-400/10",
-    delay: 0.7,
-  },
-  {
-    name: "Figma",
-    description: "Collaborative interface design and prototyping tool",
-    icon: <SiFigma className="w-8 h-8" />,
-    color: "text-purple-500",
-    bgColor: "hover:bg-purple-500/10",
-    delay: 0,
-  },
-  {
-    name: "VS Code",
-    description: "Lightweight but powerful source code editor",
-    icon: <TbBrandVscode className="w-8 h-8" />,
-    color: "text-blue-500",
-    bgColor: "hover:bg-blue-500/10",
-    delay: 0.1,
-  },
-  {
-    name: "Git",
-    description: "Distributed version control for tracking code changes",
-    icon: <TbBrandGit className="w-8 h-8" />,
-    color: "text-orange-600",
-    bgColor: "hover:bg-orange-600/10",
-    delay: 0.2,
-  },
-  {
-    name: "Docker",
-    description: "Containerization platform for consistent deployment",
-    icon: <SiDocker className="w-8 h-8" />,
-    color: "text-blue-400",
-    bgColor: "hover:bg-blue-400/10",
-    delay: 0.3,
-  },
-  {
-    name: "Grafana",
-    description: "Multi-platform analytics and interactive visualization",
-    icon: <SiGrafana className="w-8 h-8" />,
-    color: "text-orange-400",
-    bgColor: "hover:bg-orange-400/10",
-    delay: 0.4,
-  },
-  {
-    name: "Google Cloud",
-    description: "Scalable cloud computing and data storage services",
-    icon: <SiGooglecloud className="w-8 h-8" />,
-    color: "text-blue-300",
-    bgColor: "hover:bg-blue-300/10",
-    delay: 0.5,
-  },
-];
 
 const educationData = [
   {
@@ -522,7 +407,6 @@ const Navbar = () => {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
-    { href: "#techstack", label: "Tech Stack" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
   ];
@@ -663,7 +547,7 @@ const Hero = () => {
     >
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.jpg')", y: yBg, zIndex: 0 }}
+        style={{ backgroundImage: "url('/hero-bg.jpg')", y: yBg, zIndex: 0 }} // Make sure /hero-bg.jpg exists in public folder
       />
       <motion.div
         className="bg-primary/70 backdrop-blur-md p-8 md:p-16 rounded-xl text-center max-w-4xl mx-auto shadow-2xl relative"
@@ -752,7 +636,6 @@ const Hero = () => {
     </section>
   );
 };
-
 // About
 const About = () => {
   const contentRef = useRef(null);
@@ -813,7 +696,6 @@ const About = () => {
     </section>
   );
 };
-
 // --- Project Card Skeleton ---
 const ProjectCardSkeleton = () => (
   <div
@@ -847,9 +729,10 @@ const Projects = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Simulate loading
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1500);
+    }, 1500); // Adjust as needed
     return () => clearTimeout(timer);
   }, []);
 
@@ -1120,169 +1003,6 @@ const Skills = () => {
   );
 };
 
-// --- Tech Stack Component ---
-const TechStack = () => {
-  const [activeTech, setActiveTech] = useState(null);
-  const containerRef = useRef(null);
-
-  return (
-    <section
-      id="techstack"
-      className="py-20 px-6 bg-primary overflow-hidden"
-      aria-labelledby="techstack-heading"
-    >
-      <div className="container mx-auto">
-        <AnimatedSectionHeader 
-          icon={RiCodeSSlashLine} 
-          title="Tech Stack & Tools" 
-        />
-        <h2 id="techstack-heading" className="sr-only">
-          Technology Stack and Tools
-        </h2>
-        
-        <motion.p
-          className="text-lg text-light-text mb-12 text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          My technology toolkit for building scalable, efficient, and modern applications. 
-          Each tool is carefully selected for its specific strengths in the development workflow.
-        </motion.p>
-
-        {/* Tech Grid */}
-        <div 
-          ref={containerRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto"
-        >
-          {techStackData.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: tech.delay,
-                type: "spring",
-                stiffness: 100 
-              }}
-              whileHover={{ 
-                y: -10,
-                transition: { duration: 0.2 }
-              }}
-              onHoverStart={() => setActiveTech(index)}
-              onHoverEnd={() => setActiveTech(null)}
-              className={`relative ${tech.bgColor} transition-all duration-300 rounded-xl p-6 cursor-pointer border border-slate-700/50 group`}
-              data-magnetic
-            >
-              {/* Animated background effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-800/30 rounded-xl"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: activeTech === index ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              
-              {/* Tech content */}
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-4">
-                  <motion.div
-                    animate={{ 
-                      rotate: activeTech === index ? [0, 10, -10, 0] : 0,
-                      scale: activeTech === index ? 1.2 : 1
-                    }}
-                    transition={{ duration: 0.5 }}
-                    className={`${tech.color} p-3 rounded-lg bg-slate-800/50`}
-                  >
-                    {tech.icon}
-                  </motion.div>
-                  <motion.h3 
-                    className="text-xl font-bold text-light-text"
-                    animate={{ color: activeTech === index ? "#38bdf8" : "#e2e8f0" }}
-                  >
-                    {tech.name}
-                  </motion.h3>
-                </div>
-                
-                <motion.p 
-                  className="text-dark-text text-sm leading-relaxed"
-                  initial={{ opacity: 0.8 }}
-                  animate={{ opacity: activeTech === index ? 1 : 0.8 }}
-                >
-                  {tech.description}
-                </motion.p>
-                
-                {/* Animated underline */}
-                <motion.div
-                  className="h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent mt-4"
-                  initial={{ width: "0%" }}
-                  animate={{ width: activeTech === index ? "100%" : "0%" }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Interactive floating tech visualization */}
-        <motion.div 
-          className="mt-16 relative h-40"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          {techStackData.slice(0, 8).map((tech, index) => (
-            <motion.div
-              key={`float-${tech.name}`}
-              className={`absolute ${tech.color} text-4xl`}
-              style={{
-                left: `${(index % 4) * 25}%`,
-                top: `${Math.floor(index / 4) * 50}%`,
-              }}
-              animate={{
-                y: [0, -15, 0],
-                rotate: [0, 5, -5, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                repeatType: "reverse",
-                delay: index * 0.2,
-              }}
-              whileHover={{ scale: 1.5, rotate: 360 }}
-            >
-              {tech.icon}
-            </motion.div>
-          ))}
-          
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
-          >
-            <div className="text-center">
-              <motion.p 
-                className="text-secondary text-lg font-semibold"
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                Always expanding my toolkit
-              </motion.p>
-              <p className="text-light-text text-sm mt-2">
-                Continuously learning and adapting to new technologies
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
 // --- Education Component ---
 const EducationItem = ({ item }) => {
   const ref = useRef(null);
@@ -1448,7 +1168,7 @@ const Contact = () => {
             text={contactInfo.email}
           />
           <ContactInfoItem
-            href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
+            href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} // Remove spaces for tel link
             icon={FaPhoneAlt}
             title="Phone"
             text={contactInfo.phone}
@@ -1561,7 +1281,6 @@ const LandingPage = () => {
         <About />
         <Projects />
         <Skills />
-        <TechStack />
         <Education />
         <Contact />
       </main>
