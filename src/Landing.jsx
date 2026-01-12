@@ -28,6 +28,16 @@ import {
   FaPuzzlePiece,
   FaTimes,
   FaUsers,
+  FaCloud,
+  FaDatabase,
+  FaRobot,
+  FaChartLine,
+  FaServer,
+  FaTools,
+  FaCogs,
+  FaLayerGroup,
+  FaCalendarAlt,
+  FaProjectDiagram,
 } from "react-icons/fa";
 import {
   RiChatQuoteLine,
@@ -141,38 +151,25 @@ const floatAnimation = {
   }
 };
 
-// --- Tech Stack Data with Images ---
-const techStackData = {
-  frontend: [
-    { name: "React", image: "React.webp" },
-    { name: "Tailwind CSS", image: "Tailwind_CSS_Logo.webp" },
-    { name: "Figma", image: "Figma-logo.webp" },
-    { name: "PreviewUX", image: "PreviewUX.webp" },
-  ],
-  backend: [
-    { name: "Node.js", image: "Node.js_logo.svg.webp" },
-    { name: "Express.js", image: "express-js.webp" },
-  ],
-  databases: [
-    { name: "MongoDB", image: "Mongodb.webp" },
-  ],
-  devops: [
-    { name: "Docker", image: "Docker.webp" },
-    { name: "Grafana", image: "Grafana.webp" },
-    { name: "Google Cloud", image: "gcp.webp" },
-  ],
-  languages: [
-    { name: "Python", image: "Python.webp" },
-    { name: "Google Python", image: "Google Python.webp" },
-  ],
-  aiMl: [
-    { name: "Deep Learning", image: "DeepLearning.webp" },
-    { name: "Machine Learning", image: "MachineLearningPreview.webp" },
-    { name: "Hugging Face", image: "HuggingFace.webp" },
-    { name: "AI Preview", image: "AiPreview.webp" },
-    { name: "Google Data Analytics", image: "Google Advanced Data Analytics Capstone.webp" },
-  ]
-};
+// --- Unified Tech Stack Data ---
+const unifiedTechStack = [
+  { name: "React", image: "React.webp", category: "frontend" },
+  { name: "Tailwind CSS", image: "Tailwind_CSS_Logo.webp", category: "frontend" },
+  { name: "PreviewUX", image: "PreviewUX.webp", category: "frontend" },
+  { name: "Node.js", image: "Node.js_logo.svg.webp", category: "backend" },
+  { name: "Express.js", image: "express-js.webp", category: "backend" },
+  { name: "MongoDB", image: "Mongodb.webp", category: "database" },
+  { name: "Docker", image: "Docker.webp", category: "devops" },
+  { name: "Grafana", image: "Grafana.webp", category: "devops" },
+  { name: "Google Cloud", image: "gcp.webp", category: "cloud" },
+  { name: "Python", image: "Python.webp", category: "language" },
+  { name: "Google Python", image: "Google Python.webp", category: "language" },
+  { name: "Deep Learning", image: "DeepLearning.webp", category: "ai-ml" },
+  { name: "Machine Learning", image: "MachineLearningPreview.webp", category: "ai-ml" },
+  { name: "Hugging Face", image: "HuggingFace.webp", category: "ai-ml" },
+  { name: "AI/ML", image: "AiPreview.webp", category: "ai-ml" },
+  { name: "Data Analytics", image: "Google Advanced Data Analytics Capstone.webp", category: "analytics" },
+];
 
 // --- Data ---
 const projectsData = [
@@ -244,34 +241,30 @@ const projectsData = [
   },
 ];
 
-const skillsData = {
-  mernStack: [
-    { name: "JavaScript (ES6+)", icon: <FaCode className="w-5 h-5 mr-2 inline" /> },
-    { name: "React.js", icon: <FaCode className="w-5 h-5 mr-2 inline text-blue-400" /> },
-    { name: "Node.js", icon: <FaCode className="w-5 h-5 mr-2 inline text-green-400" /> },
-    { name: "Express.js", icon: <FaCode className="w-5 h-5 mr-2 inline" /> },
-    { name: "MongoDB", icon: <DiMongodb className="w-5 h-5 mr-2 inline text-green-500" /> },
-    { name: "RESTful APIs", icon: <RiChatQuoteLine className="w-5 h-5 mr-2 inline" /> },
+const expertiseData = {
+  development: [
+    { name: "Full Stack Development", description: "End-to-end web applications with modern frameworks", icon: <RiCodeSSlashLine className="w-6 h-6" /> },
+    { name: "RESTful APIs", description: "Design and implementation of scalable APIs", icon: <RiChatQuoteLine className="w-6 h-6" /> },
+    { name: "UI/UX Implementation", description: "Building intuitive and responsive interfaces", icon: <FaDesktop className="w-6 h-6" /> },
+    { name: "System Architecture", description: "Scalable and maintainable system design", icon: <FaLayerGroup className="w-6 h-6" /> },
   ],
   machineLearning: [
-    { name: "Python", icon: <FaCode className="w-5 h-5 mr-2 inline text-yellow-400" /> },
-    { name: "TensorFlow", icon: <RiSparklingLine className="w-5 h-5 mr-2 inline text-orange-400" /> },
-    { name: "Keras", icon: <RiSparklingLine className="w-5 h-5 mr-2 inline text-red-500" /> },
-    { name: "Scikit-learn", icon: <FaPuzzlePiece className="w-5 h-5 mr-2 inline text-blue-500" /> },
-    { name: "Pandas & NumPy", icon: <FaFileAlt className="w-5 h-5 mr-2 inline" /> },
-    { name: "CNNs", icon: <FaDesktop className="w-5 h-5 mr-2 inline" /> },
+    { name: "Machine Learning", description: "Developing predictive models and algorithms", icon: <FaRobot className="w-6 h-6" /> },
+    { name: "Deep Learning", description: "Neural networks and advanced AI models", icon: <BiBrain className="w-6 h-6" /> },
+    { name: "Data Analysis", description: "Extracting insights from complex datasets", icon: <FaChartLine className="w-6 h-6" /> },
+    { name: "AI Integration", description: "Integrating AI capabilities into applications", icon: <FaPuzzlePiece className="w-6 h-6" /> },
   ],
-  toolsAndPlatforms: [
-    { name: "Git & GitHub", icon: <FaCode className="w-5 h-5 mr-2 inline" /> },
-    { name: "VS Code", icon: <FaDesktop className="w-5 h-5 mr-2 inline" /> },
-    { name: "Render", icon: <FaDesktop className="w-5 h-5 mr-2 inline" /> },
-    { name: "Postman", icon: <FaComments className="w-5 h-5 mr-2 inline" /> },
+  tools: [
+    { name: "Version Control", description: "Git workflow and collaboration", icon: <FaCode className="w-6 h-6" /> },
+    { name: "DevOps", description: "CI/CD and deployment automation", icon: <FaTools className="w-6 h-6" /> },
+    { name: "Cloud Services", description: "Cloud deployment and management", icon: <FaCloud className="w-6 h-6" /> },
+    { name: "Database Management", description: "Database design and optimization", icon: <FaDatabase className="w-6 h-6" /> },
   ],
   softSkills: [
-    { name: "Analytical Thinking", icon: <BiBrain className="w-5 h-5 mr-2 inline text-yellow-400" /> },
-    { name: "Problem Solving", icon: <RiPuzzleLine className="w-5 h-5 mr-2 inline text-blue-400" /> },
-    { name: "Collaboration", icon: <FaUsers className="w-5 h-5 mr-2 inline text-green-400" /> },
-    { name: "Adaptability", icon: <RiSparklingLine className="w-5 h-5 mr-2 inline text-purple-400" /> },
+    { name: "Problem Solving", description: "Analytical approach to complex challenges", icon: <RiPuzzleLine className="w-6 h-6" /> },
+    { name: "Team Collaboration", description: "Effective communication and teamwork", icon: <RiTeamLine className="w-6 h-6" /> },
+    { name: "Adaptability", description: "Quick learning and adaptation to new technologies", icon: <RiSparklingLine className="w-6 h-6" /> },
+    { name: "Project Management", description: "Planning and execution of development projects", icon: <FaProjectDiagram className="w-6 h-6" /> },
   ],
 };
 
@@ -527,112 +520,107 @@ const TechStack = () => {
       <div className="container mx-auto">
         <AnimatedSectionHeader 
           icon={RiCodeSSlashLine}
-          title="Tech Stack"
-          subtitle="Technologies I work with to build amazing experiences"
+          title="Technology Stack"
+          subtitle="Tools and technologies I use to bring ideas to life"
         />
         
-        {/* Tech Categories with Smooth Animations */}
-        <div className="space-y-12 max-w-6xl mx-auto">
-          {Object.entries(techStackData).map(([category, items], categoryIndex) => (
+        {/* Unified Tech Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-16">
+          {unifiedTechStack.map((tech, index) => (
             <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
+              key={tech.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.03,
+                type: "spring",
+                stiffness: 200
+              }}
+              whileHover={{
+                scale: 1.15,
+                y: -10,
+                transition: { type: "spring", stiffness: 300 }
+              }}
+              className="group flex flex-col items-center"
             >
-              <motion.h3 
-                className="text-2xl font-bold text-white mb-8 text-center md:text-left"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </span>
-              </motion.h3>
-              
-              <div className="flex flex-wrap justify-center md:justify-start gap-8 md:gap-12">
-                {items.map((tech, index) => (
-                  <motion.div
-                    key={tech.name}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: index * 0.05,
-                      type: "spring",
-                      stiffness: 200
-                    }}
-                    whileHover={{
-                      scale: 1.15,
-                      y: -10,
-                      transition: { type: "spring", stiffness: 300 }
-                    }}
-                    className="group flex flex-col items-center"
-                  >
-                    <div className="relative">
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                      <div className="relative w-20 h-20 md:w-24 md:h-24 bg-slate-900/80 rounded-xl flex items-center justify-center p-4 border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-300">
-                        <img
-                          src={`/${tech.image}`}
-                          alt={tech.name}
-                          className="w-12 h-12 md:w-16 md:h-16 object-contain filter group-hover:brightness-125 transition-all duration-300"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                    <motion.p 
-                      className="mt-4 text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      {tech.name}
-                    </motion.p>
-                  </motion.div>
-                ))}
+              <div className="relative">
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <div className="relative w-20 h-20 md:w-24 md:h-24 bg-slate-900/80 rounded-xl flex items-center justify-center p-4 border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-300">
+                  <img
+                    src={`/${tech.image}`}
+                    alt={tech.name}
+                    className="w-12 h-12 md:w-16 md:h-16 object-contain filter group-hover:brightness-125 transition-all duration-300"
+                    loading="lazy"
+                  />
+                </div>
               </div>
+              <motion.p 
+                className="mt-4 text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300 text-center"
+                whileHover={{ scale: 1.05 }}
+              >
+                {tech.name}
+              </motion.p>
             </motion.div>
           ))}
         </div>
 
-        {/* Animated Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto"
-        >
-          {[
-            { label: "Technologies", value: "25+", icon: "🚀" },
-            { label: "Projects Built", value: "15+", icon: "💻" },
-            { label: "Happy Clients", value: "10+", icon: "😊" },
-            { label: "Years Experience", value: "2+", icon: "⏳" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl text-center border border-slate-700/50"
-            >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-400 mt-2">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Expertise Section */}
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSectionHeader 
+            icon={FaCogs}
+            title="Areas of Expertise"
+            subtitle="Technical capabilities and specialized skills"
+          />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(expertiseData).map(([category, items], categoryIndex) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"
+              >
+                <h3 className="text-xl font-bold text-white mb-6 capitalize">
+                  <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    {category.replace(/([A-Z])/g, ' $1').trim()}
+                  </span>
+                </h3>
+                
+                <div className="space-y-4">
+                  {items.map((item, itemIndex) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: itemIndex * 0.05 + categoryIndex * 0.1 }}
+                      whileHover={{ x: 5 }}
+                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-700/30 transition-colors"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center flex-shrink-0">
+                        <div className="text-cyan-400">
+                          {item.icon}
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-white mb-1">{item.name}</h4>
+                        <p className="text-sm text-gray-400">{item.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -647,7 +635,6 @@ const Navbar = () => {
     { href: "#about", label: "About" },
     { href: "#tech-stack", label: "Tech Stack" },
     { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
   ];
@@ -812,9 +799,9 @@ const Hero = () => {
               sequence={[
                 "Full Stack Developer",
                 2000,
-                "Machine Learning Enthusiast",
+                "Machine Learning Specialist",
                 2000,
-                "MERN Stack Specialist",
+                "MERN Stack Expert",
                 2000,
                 "AI/ML Engineer",
                 2000,
@@ -832,8 +819,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Crafting digital experiences with cutting-edge technologies and innovative solutions. 
-            Passionate about building scalable applications and intelligent systems.
+            Crafting innovative digital solutions with modern technologies. 
+            Specializing in full-stack development and AI/ML integration to build 
+            scalable, intelligent applications.
           </motion.p>
 
           <motion.div
@@ -849,7 +837,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">View My Work</span>
+              <span className="relative z-10">View Projects</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.a>
 
@@ -861,7 +849,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <span className="flex items-center gap-2">
-                Get In Touch
+                Contact Me
                 <FaExternalLinkAlt className="group-hover:translate-x-1 transition-transform" />
               </span>
             </motion.a>
@@ -937,38 +925,41 @@ const About = () => {
               <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
                 <h3 className="text-2xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    My Journey
+                    Professional Journey
                   </span>
                 </h3>
                 
                 <div className="space-y-4">
                   <p className="text-gray-300 leading-relaxed">
-                    Hi, I'm Sarang Akhade, a passionate Full Stack Developer with expertise in 
-                    Machine Learning and AI. I specialize in building scalable web applications 
-                    and intelligent systems that solve real-world problems.
+                    I'm a passionate Full Stack Developer with specialized expertise in 
+                    Machine Learning and AI integration. My approach combines technical 
+                    excellence with creative problem-solving to build applications that 
+                    are both powerful and user-friendly.
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
                     With a strong foundation in the MERN stack and advanced knowledge of 
-                    TensorFlow, I create applications that are not only functional but also 
-                    intuitive and accessible to a wide audience.
+                    TensorFlow and AI frameworks, I create intelligent solutions that 
+                    bridge the gap between cutting-edge technology and practical 
+                    application.
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
-                    My journey includes developing a highly scalable plant disease detection 
-                    system using ML models, which showcases my ability to integrate AI with 
-                    full-stack development for impactful solutions.
+                    My experience includes developing scalable plant disease detection 
+                    systems, AI-powered documentation tools, and enterprise management 
+                    solutions—each demonstrating my ability to integrate AI with 
+                    full-stack development for maximum impact.
                   </p>
                   
                   <div className="pt-6 border-t border-slate-700/50">
                     <div className="flex flex-wrap gap-4">
                       {[
-                        "Full Stack Development",
+                        "Full Stack Architecture",
                         "Machine Learning",
                         "AI Integration",
                         "Cloud Deployment",
-                        "UI/UX Design",
-                        "Problem Solving"
+                        "System Design",
+                        "Technical Leadership"
                       ].map((skill, index) => (
                         <motion.span
                           key={skill}
@@ -996,24 +987,24 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            {/* Experience Cards */}
+            {/* Professional Highlights */}
             {[
               {
                 title: "Full Stack Development",
-                description: "Building end-to-end web applications with modern frameworks and best practices.",
-                icon: "💻",
+                description: "End-to-end application development with modern frameworks and best practices.",
+                icon: <RiCodeSSlashLine className="w-6 h-6" />,
                 color: "from-cyan-500 to-blue-500"
               },
               {
-                title: "Machine Learning",
-                description: "Developing and deploying AI/ML models for intelligent applications.",
-                icon: "🤖",
+                title: "AI/ML Integration",
+                description: "Developing and deploying intelligent models for real-world applications.",
+                icon: <FaRobot className="w-6 h-6" />,
                 color: "from-purple-500 to-pink-500"
               },
               {
-                title: "Cloud & DevOps",
-                description: "Deploying scalable applications with CI/CD pipelines and cloud services.",
-                icon: "☁️",
+                title: "Cloud & Infrastructure",
+                description: "Deploying scalable applications with optimized cloud infrastructure.",
+                icon: <FaCloud className="w-6 h-6" />,
                 color: "from-green-500 to-emerald-500"
               }
             ].map((item, index) => (
@@ -1027,7 +1018,7 @@ const About = () => {
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl`}>
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center text-white`}>
                     {item.icon}
                   </div>
                   <div>
@@ -1059,7 +1050,7 @@ const About = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white">View Resume</h4>
-                      <p className="text-gray-400">Download my detailed resume</p>
+                      <p className="text-gray-400">Download my comprehensive portfolio</p>
                     </div>
                   </div>
                   <FaExternalLinkAlt className="text-cyan-400 group-hover:translate-x-2 transition-transform" />
@@ -1114,7 +1105,7 @@ const Projects = () => {
         <AnimatedSectionHeader 
           icon={FaDesktop}
           title="Featured Projects"
-          subtitle="Showcasing my best work and innovations"
+          subtitle="Showcasing innovative solutions and technical excellence"
         />
         
         {isLoading ? (
@@ -1214,7 +1205,7 @@ const ProjectCard = ({ project, index }) => {
 
         {/* Tech Stack */}
         <div className="mb-6">
-          <h4 className="text-sm font-semibold text-gray-300 mb-3">Technologies</h4>
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Technologies Used</h4>
           <div className="flex flex-wrap gap-2">
             {project.techStack.slice(0, 4).map((tech) => (
               <motion.span
@@ -1258,82 +1249,12 @@ const ProjectCard = ({ project, index }) => {
               whileTap={{ scale: 0.95 }}
             >
               <FaGithub className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span className="text-sm font-medium">Code</span>
+              <span className="text-sm font-medium">View Code</span>
             </motion.a>
           )}
         </div>
       </div>
     </motion.div>
-  );
-};
-
-// --- Skills Component ---
-const Skills = () => {
-  return (
-    <section id="skills" className="py-20 px-6 relative">
-      <div className="container mx-auto">
-        <AnimatedSectionHeader 
-          icon={RiSparklingLine}
-          title="Skills & Expertise"
-          subtitle="Technical proficiencies and core competencies"
-        />
-        
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {Object.entries(skillsData).map(([category, skills], index) => (
-            <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/30 transition-all"
-            >
-              <h3 className="text-2xl font-bold text-white mb-8">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  {category.split(/(?=[A-Z])/).join(' ')}
-                </span>
-              </h3>
-              
-              <div className="space-y-4">
-                {skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
-                    whileHover={{ x: 5 }}
-                    className="flex items-center justify-between p-4 rounded-xl bg-slate-900/50 hover:bg-slate-800/50 transition-colors group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        {React.cloneElement(skill.icon, { className: "w-5 h-5 text-cyan-400" })}
-                      </div>
-                      <span className="font-medium text-gray-300 group-hover:text-white transition-colors">
-                        {skill.name}
-                      </span>
-                    </div>
-                    
-                    <div className="flex items-center gap-2">
-                      {[...Array(5)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`w-2 h-6 rounded-full transition-all ${
-                            i < 4 ? 'bg-cyan-500' : 'bg-slate-700'
-                          } group-hover:bg-cyan-400`}
-                          style={{ height: `${(i + 1) * 4 + 10}px` }}
-                        />
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 };
 
@@ -1344,8 +1265,8 @@ const Education = () => {
       <div className="container mx-auto">
         <AnimatedSectionHeader 
           icon={FaGraduationCap}
-          title="Education"
-          subtitle="Academic background and qualifications"
+          title="Education & Qualifications"
+          subtitle="Academic foundation and continuous learning"
         />
         
         <div className="max-w-4xl mx-auto">
@@ -1381,11 +1302,11 @@ const Education = () => {
                       
                       <div className="flex flex-wrap gap-4 mb-4">
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full" />
+                          <FaCalendarAlt className="w-4 h-4 text-cyan-400" />
                           <span className="text-gray-300">{edu.duration}</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full" />
+                          <FaGraduationCap className="w-4 h-4 text-blue-400" />
                           <span className="text-gray-300">{edu.cgpa}</span>
                         </div>
                       </div>
@@ -1393,8 +1314,8 @@ const Education = () => {
                       <div className="pt-4 border-t border-slate-700/50">
                         <p className="text-gray-400">
                           {index === 0 
-                            ? "Specialized in advanced computer applications, software engineering, and modern development practices."
-                            : "Focused on core computer science concepts, algorithms, and programming fundamentals."}
+                            ? "Advanced studies in computer applications, software engineering methodologies, and modern development practices with focus on scalable system design."
+                            : "Comprehensive foundation in computer science principles, algorithms, data structures, and programming fundamentals."}
                         </p>
                       </div>
                     </div>
@@ -1429,7 +1350,7 @@ const Contact = () => {
         <AnimatedSectionHeader 
           icon={FaEnvelope}
           title="Get In Touch"
-          subtitle="Let's discuss your next project or opportunity"
+          subtitle="Let's discuss opportunities or collaborate on innovative projects"
         />
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -1605,7 +1526,7 @@ const Footer = () => {
               Sarang Akhade
             </motion.a>
             <p className="text-gray-400 text-sm mt-2">
-              Full Stack Developer & ML Enthusiast
+              Full Stack Developer & ML Specialist
             </p>
           </div>
           
@@ -1672,7 +1593,6 @@ const LandingPage = () => {
         <About />
         <TechStack />
         <Projects />
-        <Skills />
         <Education />
         <Contact />
       </main>
