@@ -67,7 +67,7 @@ const projectsData = [
       "Developed a full-stack MERN application with a focus on AI integration.",
       "Engineered a backend system to analyze code and generate documentation.",
       "Integrated a powerful AI model to create UML diagrams and code summaries.",
-      "Designed a user-friendly React interface for code submission and viewing generated documents.",
+      "Designed a user-friendly React interface for code submission and downloading generated documents.",
       "Deployed on Render for continuous availability and scalability.",
     ],
     techStack: [
@@ -75,6 +75,7 @@ const projectsData = [
       "Node.js",
       "Express.js",
       "MongoDB",
+      "Microservices",
       "AI/LLM APIs",
       "Render",
     ],
