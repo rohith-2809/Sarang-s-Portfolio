@@ -124,6 +124,7 @@ const projectsData = [
       "Express.js",
       "MongoDB",
       "TensorFlow",
+      "Keras",
       "Google Gemini",
       "Render",
     ],
