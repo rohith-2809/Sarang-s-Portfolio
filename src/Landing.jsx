@@ -445,7 +445,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             data-magnetic
           >
-            Sarang Akhade
+            Sarang Rayaji Akhade
           </motion.a>
           <div className="hidden md:flex space-x-1">
             {navLinks.map((link) => (
