@@ -13,10 +13,15 @@
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.15.0",
     "react": "^19.1.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
+    "react-intersection-observer": "^10.0.3",
+    "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
-    "sarang-s-portfolio": "file:"
+    "sarang-s-portfolio": "file:",
+    "sharp": "^0.34.5",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

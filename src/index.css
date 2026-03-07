@@ -9,8 +9,22 @@ body {
 }
 /* In your global CSS */
 :root {
-  --color-primary-hex: #0f172a; /* Example: slate-900 */
-  --color-secondary-hex: #0ea5e9; /* Example: sky-500 */
-  --color-light-text-hex: #e2e8f0; /* Example: slate-200 */
-  /* ... add others from your tailwind.config.js theme */
+  --color-primary-hex: #0f172a;
+  --color-secondary-hex: #0ea5e9;
+  --color-light-text-hex: #e2e8f0;
+}
+
+/* Custom Scrollbar - Deep Midnight Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
 }
