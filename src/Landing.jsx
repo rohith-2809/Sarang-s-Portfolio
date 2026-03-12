@@ -253,8 +253,8 @@ const educationData = [
     icon: (
       <FaGraduationCap className="w-8 h-8 text-secondary mr-4 flex-shrink-0" />
     ),
-  };
-
+  }
+];
 const contactInfo = {
   email: "akhadesarang1036@gmail.com",
   phone: "+91 82087 96008",
