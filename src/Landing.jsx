@@ -246,15 +246,14 @@ const educationData = [
     ),
   },
   {
-    degree: "Bachelor of Science in Computer Science (B.Sc. CS)",
+    degree: "Bachelor of Science in Computer Science  (B.Sc. CS)",
     institution: "Dr. D. Y. Patil Arts, Commerce & Science College, Pune",
-    duration: "Oct 2020 – Aug 2023",
+    duration: "Oct 2020 – June 2023",
     cgpa: "CGPA: 8.34",
     icon: (
       <FaGraduationCap className="w-8 h-8 text-secondary mr-4 flex-shrink-0" />
     ),
-  },
-];
+  };
 
 const contactInfo = {
   email: "akhadesarang1036@gmail.com",
