@@ -29,7 +29,7 @@ import {
   FaTimes,
   FaUsers,
 } from "react-icons/fa";
-import { MdDescription, MdWork } from 'react-icons/md';
+import { MdDescription, MdWork } from "react-icons/md";
 import {
   RiChatQuoteLine,
   RiCodeSSlashLine,
@@ -59,7 +59,8 @@ const buttonHoverEffect = {
 const projectsData = [
   {
     title: "ORION",
-    description: "A sovereign, offline‑first cognitive agent for secure, system‑aware execution. Features kernel‑level defense and autonomous task orchestration.",
+    description:
+      "A sovereign, offline‑first cognitive agent for secure, system‑aware execution. Features kernel‑level defense and autonomous task orchestration.",
     details: [
       "Developed a sovereign cognitive agent architecture.",
       "Implemented kernel-level defense mechanisms.",
@@ -72,7 +73,8 @@ const projectsData = [
   },
   {
     title: "ORION‑USB",
-    description: "Run the entire ORION agent directly from a USB drive – no installation, no trace left on the host machine.",
+    description:
+      "Run the entire ORION agent directly from a USB drive – no installation, no trace left on the host machine.",
     details: [
       "Optimized ORION for portable USB execution.",
       "Ensured zero-trace operation on host machines.",
@@ -84,7 +86,8 @@ const projectsData = [
   },
   {
     title: "Plant Disease Detection",
-    description: "AI‑powered web app that identifies plant diseases from images using CNN models. Provides detailed analysis and preventive measures.",
+    description:
+      "AI‑powered web app that identifies plant diseases from images using CNN models. Provides detailed analysis and preventive measures.",
     details: [
       "Built an AI platform for agricultural image analysis.",
       "Trained CNN models to classify various plant diseases.",
@@ -97,7 +100,8 @@ const projectsData = [
   },
   {
     title: "DocuAgent AI",
-    description: "An intelligent agent that automates software documentation by generating UML diagrams and code explanations directly from a given codebase.",
+    description:
+      "An intelligent agent that automates software documentation by generating UML diagrams and code explanations directly from a given codebase.",
     details: [
       "Developed an agentic system to parse and analyze repositories.",
       "Integrated LLMs to generate contextual code explanations.",
@@ -110,7 +114,8 @@ const projectsData = [
   },
   {
     title: "Employee Management",
-    description: "Fast, responsive app built with React, Tailwind, and Vite to manage employee data using local storage — no backend needed.",
+    description:
+      "Fast, responsive app built with React, Tailwind, and Vite to manage employee data using local storage — no backend needed.",
     details: [
       "Built a highly responsive frontend application using Vite and React.",
       "Implemented state management leveraging local storage.",
@@ -123,7 +128,8 @@ const projectsData = [
   },
   {
     title: "Financial Sentiment Classifier",
-    description: "XLM‑R model fine‑tuned on 14k financial sentences for market news analytics, stock tweet sentiment, and trading signal enrichment.",
+    description:
+      "XLM‑R model fine‑tuned on 14k financial sentences for market news analytics, stock tweet sentiment, and trading signal enrichment.",
     details: [
       "Fine-tuned XLM-R models on 14k+ financial domain sentences.",
       "Implemented sentiment analysis for market news and stock tweets.",
@@ -135,7 +141,8 @@ const projectsData = [
   },
   {
     title: "Mediscope",
-    description: "AI‑powered platform for instant X‑ray analysis, lab report simplification, and a health assistant chat. Secure, JWT‑authenticated, real‑time updates.",
+    description:
+      "AI‑powered platform for instant X‑ray analysis, lab report simplification, and a health assistant chat. Secure, JWT‑authenticated, real‑time updates.",
     details: [
       "Built an AI platform for medical image (X-ray) analysis.",
       "Implemented NLP-based lab report simplification.",
@@ -321,7 +328,9 @@ const LoadingScreen = ({ onComplete }) => {
               alt={techStack[currentIndex].name}
               className="h-24 md:h-32 mb-4 object-contain"
             />
-            <div className="text-2xl font-bold text-secondary">{techStack[currentIndex].name}</div>
+            <div className="text-2xl font-bold text-secondary">
+              {techStack[currentIndex].name}
+            </div>
           </motion.div>
         </AnimatePresence>
 
@@ -433,7 +442,7 @@ const CustomCursor = () => {
         !e.relatedTarget ||
         (e.relatedTarget &&
           !e.relatedTarget.closest(
-            "[data-magnetic], a, button, input, textarea"
+            "[data-magnetic], a, button, input, textarea",
           ))
       ) {
         setIsPointer(false);
@@ -456,17 +465,17 @@ const CustomCursor = () => {
   const cursorBg = isMagnetic
     ? "rgba(0, 191, 255, 0.25)"
     : isPointer
-    ? "rgba(0, 191, 255, 0.2)"
-    : isText
-    ? "rgba(255, 255, 255, 0.2)"
-    : "rgba(0, 191, 255, 0.6)";
+      ? "rgba(0, 191, 255, 0.2)"
+      : isText
+        ? "rgba(255, 255, 255, 0.2)"
+        : "rgba(0, 191, 255, 0.6)";
   const cursorBorder = isMagnetic
     ? "2px solid rgba(0, 191, 255, 0.7)"
     : isPointer
-    ? "2px solid rgba(0, 191, 255, 0.6)"
-    : isText
-    ? "2px solid rgba(255, 255, 255, 0.6)"
-    : "none";
+      ? "2px solid rgba(0, 191, 255, 0.6)"
+      : isText
+        ? "2px solid rgba(255, 255, 255, 0.6)"
+        : "none";
   const cursorBorderRadius = isText ? "3px" : "9999px";
 
   return (
@@ -575,7 +584,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             data-magnetic
           >
-            Sarang Rayaji Akhade
+            Sarang Akhade
           </motion.a>
 
           <div>
@@ -585,7 +594,7 @@ const Navbar = () => {
               whileTap={{
                 scale: 0.8,
                 opacity: [1, 0, 1, 0.5, 1], // Flicker effect
-                transition: { duration: 0.2 }
+                transition: { duration: 0.2 },
               }}
               animate={{ rotate: isOpen ? 90 : 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -639,7 +648,6 @@ const Navbar = () => {
   );
 };
 
-
 const TechStackGrid = () => {
   const logos = [
     { name: "React", src: "/React.webp" },
@@ -684,7 +692,6 @@ const TechStackGrid = () => {
   );
 };
 
-
 const Hero = () => {
   const containerRef = useRef(null);
   const heroRef = useRef(null);
@@ -700,7 +707,8 @@ const Hero = () => {
     const element = document.getElementById(targetId);
     if (element) {
       const navbarHeight = document.querySelector("nav")?.offsetHeight || 0;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navbarHeight;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
@@ -723,7 +731,7 @@ const Hero = () => {
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1]
+            opacity: [0.1, 0.15, 0.1],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-secondary/20 blur-[150px] rounded-full"
@@ -731,7 +739,7 @@ const Hero = () => {
         <motion.div
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.05, 0.1, 0.05]
+            opacity: [0.05, 0.1, 0.05],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"
@@ -759,7 +767,8 @@ const Hero = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            SARANG <span className="text-secondary tracking-[-0.1em]">AKHADE</span>
+            SARANG{" "}
+            <span className="text-secondary tracking-[-0.1em]">AKHADE</span>
           </motion.h1>
         </div>
 
@@ -790,7 +799,16 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          Building highly scalable, responsive web applications at the intersection of the <span className="text-white border-b border-white/20">MERN stack</span> and <span className="text-white border-b border-white/20">Artificial Intelligence</span>.
+          Building highly scalable, responsive web applications at the
+          intersection of the{" "}
+          <span className="text-white border-b border-white/20">
+            MERN stack
+          </span>{" "}
+          and{" "}
+          <span className="text-white border-b border-white/20">
+            Artificial Intelligence
+          </span>
+          .
         </motion.p>
 
         <motion.div
@@ -852,7 +870,10 @@ const About = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.7], [0, 1]);
 
   return (
-    <section id="about" className="py-24 px-6 bg-[#020617] overflow-hidden relative border-t border-slate-800/20">
+    <section
+      id="about"
+      className="py-24 px-6 bg-[#020617] overflow-hidden relative border-t border-slate-800/20"
+    >
       <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-secondary/5 blur-[100px] rounded-full pointer-events-none" />
       <div className="container mx-auto">
         <AnimatedSectionHeader icon={MdWork} title="Strategic Profile" />
@@ -865,23 +886,43 @@ const About = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 blur-3xl rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-1000" />
 
             <p className="text-xl text-light-text/70 leading-relaxed mb-8 font-light">
-              Hi, I'm <span className="text-white font-bold tracking-tight">Sarang Akhade</span>, a Full Stack Developer specialized in architecting <span className="text-secondary font-medium italic">Sovereign Intelligence</span>.
-              My expertise lies in crafting complex, user-centric systems that bridge the gap between AI and core security.
+              Hi, I'm{" "}
+              <span className="text-white font-bold tracking-tight">
+                Sarang Akhade
+              </span>
+              , a Full Stack Developer specialized in architecting{" "}
+              <span className="text-secondary font-medium italic">
+                Sovereign Intelligence
+              </span>
+              . My expertise lies in crafting complex, user-centric systems that
+              bridge the gap between AI and core security.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12 text-left">
               <div className="space-y-4">
-                <h4 className="text-secondary font-mono text-xs uppercase tracking-widest">Cognitive Architecture</h4>
-                <p className="text-sm text-light-text/50">Designing autonomous agents with system-aware execution and recursive reasoning capabilities.</p>
+                <h4 className="text-secondary font-mono text-xs uppercase tracking-widest">
+                  Cognitive Architecture
+                </h4>
+                <p className="text-sm text-light-text/50">
+                  Designing autonomous agents with system-aware execution and
+                  recursive reasoning capabilities.
+                </p>
               </div>
               <div className="space-y-4">
-                <h4 className="text-secondary font-mono text-xs uppercase tracking-widest">Full-Stack Resilience</h4>
-                <p className="text-sm text-light-text/50">Building robust, end-to-end applications using MERN stack with a focus on kernel-level auditing.</p>
+                <h4 className="text-secondary font-mono text-xs uppercase tracking-widest">
+                  Full-Stack Resilience
+                </h4>
+                <p className="text-sm text-light-text/50">
+                  Building robust, end-to-end applications using MERN stack with
+                  a focus on kernel-level auditing.
+                </p>
               </div>
             </div>
 
             <p className="text-lg text-light-text/60 leading-relaxed mb-12 font-light">
-              I thrive in environments where performance and security are paramount. My journey involves translating theoretical research into production-ready, autonomous defense mechanisms.
+              I thrive in environments where performance and security are
+              paramount. My journey involves translating theoretical research
+              into production-ready, autonomous defense mechanisms.
             </p>
 
             <div className="flex justify-center md:justify-start">
@@ -936,7 +977,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20">
+    <section
+      id="projects"
+      className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20"
+    >
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none animate-pulse" />
       <div className="container mx-auto relative z-10">
         <AnimatedSectionHeader icon={FaLaptopCode} title="Selected Works" />
@@ -995,7 +1039,9 @@ const ProjectCard = ({ project, index }) => {
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-secondary/30">
             <RiCodeSSlashLine className="w-16 h-16 mb-2 opacity-50" />
-            <span className="font-mono text-xs uppercase tracking-widest">System Executable</span>
+            <span className="font-mono text-xs uppercase tracking-widest">
+              System Executable
+            </span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-90 group-hover:opacity-60 transition-opacity duration-500" />
@@ -1069,8 +1115,8 @@ const ProjectCard = ({ project, index }) => {
               </a>
             ) : (
               <a
-                 href="#"
-                 onClick={(e) => e.preventDefault()}
+                href="#"
+                onClick={(e) => e.preventDefault()}
                 className="flex-1 flex items-center justify-center bg-white/5 hover:bg-white/10 text-white font-bold text-xs py-2.5 px-3 rounded-lg border border-white/10 transition-all duration-300"
               >
                 <FaCode className="w-3.5 h-3.5 mr-2" /> Source
@@ -1108,17 +1154,24 @@ const ExperienceItem = ({ item }) => {
 
       <div className="flex-1 text-center md:text-left">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-          <h3 className="text-xl font-black text-white group-hover:text-secondary transition-colors uppercase tracking-tight">{item.role}</h3>
+          <h3 className="text-xl font-black text-white group-hover:text-secondary transition-colors uppercase tracking-tight">
+            {item.role}
+          </h3>
           <span className="text-xs font-mono text-secondary bg-secondary/10 px-3 py-1 rounded-full border border-secondary/20 h-fit w-fit mx-auto md:mx-0">
             {item.duration}
           </span>
         </div>
 
-        <p className="text-lg font-bold text-light-text/60 mb-6">{item.company}</p>
+        <p className="text-lg font-bold text-light-text/60 mb-6">
+          {item.company}
+        </p>
 
         <ul className="space-y-3">
           {item.details.map((detail, index) => (
-            <li key={index} className="flex items-start gap-3 text-sm text-light-text/40 font-light">
+            <li
+              key={index}
+              className="flex items-start gap-3 text-sm text-light-text/40 font-light"
+            >
               <span className="w-1.5 h-1.5 bg-secondary rounded-full mt-1.5 flex-shrink-0" />
               {detail}
             </li>
@@ -1131,7 +1184,10 @@ const ExperienceItem = ({ item }) => {
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20">
+    <section
+      id="experience"
+      className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20"
+    >
       <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="container mx-auto relative z-10">
         <AnimatedSectionHeader icon={MdWork} title="Experience" />
@@ -1150,22 +1206,30 @@ const Publications = () => {
   const publications = [
     {
       title: "ORION Whitepaper",
-      subtitle: "ORION: A Framework for Cognitive Intelligence in Autonomous Agents",
+      subtitle:
+        "ORION: A Framework for Cognitive Intelligence in Autonomous Agents",
       year: "2026",
       link: "https://zenodo.org/records/18831625?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjU3MmJmYzkwLTY5M2YtNDY1Ni1iOGE3LWJkZDU3MmMwZjZjOSIsImRhdGEiOnt9LCJyYW5kb20iOiJhNmZkMTJhOGQ1MzM1NjBkYzQ5NTA4MTExYjY4ZGZkMiJ9.BXtsgAUU-isnmL3pMrfIc832aVObiG515pWwZE1IhWJ2doCYe7SMmnR8gSVp3BZVOgYDa5bKt1gNsjjloHyOqA",
       image: "/orion-whitepaper.webp",
-      description: "This research introduces ORION, a novel architecture for building sovereign cognitive agents capable of system‑aware execution, kernel‑level defense, and autonomous task orchestration. The whitepaper explores the theoretical foundations of cognitive intelligence in AI systems and presents empirical results from deployment in secure environments.",
+      description:
+        "This research introduces ORION, a novel architecture for building sovereign cognitive agents capable of system‑aware execution, kernel‑level defense, and autonomous task orchestration. The whitepaper explores the theoretical foundations of cognitive intelligence in AI systems and presents empirical results from deployment in secure environments.",
     },
   ];
 
   return (
-    <section id="publications" className="py-24 px-6 bg-[#020617] overflow-hidden relative border-t border-slate-800/50">
+    <section
+      id="publications"
+      className="py-24 px-6 bg-[#020617] overflow-hidden relative border-t border-slate-800/50"
+    >
       {/* Cinematic Background Glows */}
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-secondary/10 blur-[150px] rounded-full pointer-events-none animate-pulse" />
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto relative z-10">
-        <AnimatedSectionHeader icon={MdDescription} title="Strategic Research" />
+        <AnimatedSectionHeader
+          icon={MdDescription}
+          title="Strategic Research"
+        />
 
         <div className="max-w-6xl mx-auto">
           {publications.map((pub, index) => (
@@ -1196,7 +1260,9 @@ const Publications = () => {
               <div className="p-12 lg:w-1/2 flex flex-col justify-center bg-gradient-to-br from-slate-900/60 to-transparent">
                 <div className="flex items-center gap-5 mb-8">
                   <div className="h-[2px] w-16 bg-secondary/40" />
-                  <span className="text-secondary/80 text-sm font-mono tracking-widest">{pub.year}</span>
+                  <span className="text-secondary/80 text-sm font-mono tracking-widest">
+                    {pub.year}
+                  </span>
                 </div>
 
                 <h3 className="text-4xl font-black text-white mb-4 leading-tight group-hover:text-secondary transition-colors duration-500">
@@ -1215,7 +1281,10 @@ const Publications = () => {
                   <motion.a
                     href={pub.link}
                     className="px-8 py-4 bg-secondary text-primary rounded-2xl text-sm font-bold inline-flex items-center gap-3 transition-transform shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-                    whileHover={{ scale: 1.05, boxShadow: "0_0_30px_rgba(56,189,248,0.5)" }}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0_0_30px_rgba(56,189,248,0.5)",
+                    }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Examine Whitepaper
@@ -1223,8 +1292,12 @@ const Publications = () => {
                   </motion.a>
 
                   <div className="flex items-center gap-3 px-5 py-3 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    <span className="text-[10px] text-dark-text uppercase tracking-widest font-bold">Protocol:</span>
-                    <span className="text-xs text-secondary font-mono">Cognitive intelligence</span>
+                    <span className="text-[10px] text-dark-text uppercase tracking-widest font-bold">
+                      Protocol:
+                    </span>
+                    <span className="text-xs text-secondary font-mono">
+                      Cognitive intelligence
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1249,7 +1322,9 @@ const SkillCategory = ({ title, skills, categoryIcon }) => {
         <div className="p-3 bg-secondary/10 rounded-xl border border-secondary/20 text-secondary">
           {categoryIcon}
         </div>
-        <h3 className="text-lg font-black text-white uppercase tracking-tight group-hover:text-secondary transition-colors">{title}</h3>
+        <h3 className="text-lg font-black text-white uppercase tracking-tight group-hover:text-secondary transition-colors">
+          {title}
+        </h3>
       </div>
 
       <div className="flex flex-wrap gap-2">
@@ -1257,9 +1332,13 @@ const SkillCategory = ({ title, skills, categoryIcon }) => {
           <motion.span
             key={skill.name}
             className="flex items-center gap-2 bg-white/5 text-light-text/70 text-xs font-mono px-3 py-1.5 rounded-full border border-white/5 hover:border-secondary/40 hover:text-white transition-all cursor-default"
-            whileHover={{ scale: 1.05, backgroundColor: "rgba(56,189,248,0.1)" }}
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "rgba(56,189,248,0.1)",
+            }}
           >
-            {skill.icon && React.cloneElement(skill.icon, { className: "w-3.5 h-3.5" })}
+            {skill.icon &&
+              React.cloneElement(skill.icon, { className: "w-3.5 h-3.5" })}
             {skill.name}
           </motion.span>
         ))}
@@ -1270,7 +1349,10 @@ const SkillCategory = ({ title, skills, categoryIcon }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20">
+    <section
+      id="skills"
+      className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20"
+    >
       <div className="absolute top-1/2 left-0 w-80 h-80 bg-secondary/5 blur-[100px] rounded-full pointer-events-none" />
       <div className="container mx-auto relative z-10">
         <AnimatedSectionHeader icon={RiSparklingLine} title="Expertise Map" />
@@ -1312,7 +1394,7 @@ const EducationItem = ({ item }) => {
   const x = useTransform(
     scrollYProgress,
     [0, 1],
-    [item.degree.includes("Master") ? -25 : 25, 0]
+    [item.degree.includes("Master") ? -25 : 25, 0],
   );
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
@@ -1338,10 +1420,16 @@ const EducationItem = ({ item }) => {
 
 const Education = () => {
   return (
-    <section id="education" className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20">
+    <section
+      id="education"
+      className="py-24 px-6 bg-[#020617] relative overflow-hidden border-t border-slate-800/20"
+    >
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="container mx-auto relative z-10">
-        <AnimatedSectionHeader icon={FaGraduationCap} title="Intellectual Path" />
+        <AnimatedSectionHeader
+          icon={FaGraduationCap}
+          title="Intellectual Path"
+        />
         <div className="max-w-4xl mx-auto space-y-8">
           {educationData.map((edu, index) => (
             <motion.div
@@ -1356,12 +1444,16 @@ const Education = () => {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
-                  <h3 className="text-xl font-black text-white group-hover:text-secondary transition-colors tracking-tight uppercase">{edu.degree}</h3>
+                  <h3 className="text-xl font-black text-white group-hover:text-secondary transition-colors tracking-tight uppercase">
+                    {edu.degree}
+                  </h3>
                   <span className="text-xs font-mono text-secondary bg-secondary/10 px-4 py-1 rounded-full border border-secondary/20 w-fit mx-auto md:mx-0">
                     {edu.duration}
                   </span>
                 </div>
-                <p className="text-lg font-bold text-light-text/60 mb-2">{edu.institution}</p>
+                <p className="text-lg font-bold text-light-text/60 mb-2">
+                  {edu.institution}
+                </p>
                 <div className="inline-block px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-secondary font-mono tracking-tighter">
                   Status: {edu.cgpa}
                 </div>
@@ -1388,7 +1480,9 @@ const ContactInfoItem = ({ href, icon: Icon, title, text, isDiv = false }) => {
       </div>
 
       <div className="text-center">
-        <h3 className="text-base font-black text-white uppercase tracking-tight mb-2">{title}</h3>
+        <h3 className="text-base font-black text-white uppercase tracking-tight mb-2">
+          {title}
+        </h3>
         {isDiv ? (
           <p className="text-sm text-light-text/40 font-light">{text}</p>
         ) : (
@@ -1521,7 +1615,8 @@ const Footer = () => {
           transition={{ duration: 1 }}
         >
           <h2 className="text-2xl font-black text-white tracking-tighter italic uppercase">
-            SARANG <span className="text-secondary tracking-[-0.1em]">AKHADE</span>
+            SARANG{" "}
+            <span className="text-secondary tracking-[-0.1em]">AKHADE</span>
           </h2>
         </motion.div>
 
